@@ -12,12 +12,36 @@ void reply(char* say)
 
 
     // B
+    if(strstr(say, "把") != NULL)
+    {
+        if(strcmp(say, "把西瓜带回来了吗") == 0)
+        {
+            printf("是的\n");
+            mciSendString("play sound\\1-3\\是的3.mp3",        //MCI命令字符串
+                NULL,                                //存放反馈信息的缓冲区
+                0,                                    //缓冲区的长度
+                NULL);                                //回调窗体的句柄，一般为NULL
+            // 睡眠1秒
+            Sleep(1000);
+        }
+    }
+
     if(strstr(say, "不") != NULL)
     {
         if(strcmp(say, "不觉得麻烦吗") == 0)
         {
             printf("不，没事的\n");
             mciSendString("play sound\\1-2\\不，没事的.mp3",        //MCI命令字符串
+                NULL,                                //存放反馈信息的缓冲区
+                0,                                    //缓冲区的长度
+                NULL);                                //回调窗体的句柄，一般为NULL
+            // 睡眠2秒
+            Sleep(2000);
+        }
+        else if(strcmp(say, "不会的是吧") == 0)
+        {
+            printf("是的\n");
+            mciSendString("play sound\\1-3\\是的2.mp3",        //MCI命令字符串
                 NULL,                                //存放反馈信息的缓冲区
                 0,                                    //缓冲区的长度
                 NULL);                                //回调窗体的句柄，一般为NULL
@@ -40,6 +64,25 @@ void reply(char* say)
             Sleep(2000);
         }
     }
+
+    // H
+    if(strstr(say, "还") != NULL)
+    {
+        if(strcmp(say, "还需要练习呢") == 0)
+        {
+            printf("对不起\n");
+            mciSendString("play sound\\1-3\\对不起.mp3",        //MCI命令字符串
+                NULL,                                //存放反馈信息的缓冲区
+                0,                                    //缓冲区的长度
+                NULL);                                //回调窗体的句柄，一般为NULL
+            // 睡眠1.5秒
+            Sleep(1500);
+        }
+    }
+
+    // I
+
+    // J
 
     // K
     if(strstr(say, "卡片") != NULL)
@@ -93,6 +136,40 @@ void reply(char* say)
             // 睡眠1.5秒
             Sleep(1500);
         }
+        else if(strcmp(say, "那当然是因为开心咯") == 0)
+        {
+            printf("开心？开心\n");
+            mciSendString("play sound\\1-3\\开心？开心.mp3",        //MCI命令字符串
+                NULL,                                //存放反馈信息的缓冲区
+                0,                                    //缓冲区的长度
+                NULL);                                //回调窗体的句柄，一般为NULL
+            // 睡眠5.5秒
+            Sleep(5500);
+        }
+    }
+
+    if(strstr(say, "你") != NULL)
+    {
+        if(strcmp(say, "你是怎么去亚马逊的") == 0)
+        {
+            printf("我是以24马赫的速度飞过去的\n");
+            mciSendString("play sound\\1-3\\我是以24马赫的速度飞过去的.mp3",        //MCI命令字符串
+                NULL,                                //存放反馈信息的缓冲区
+                0,                                    //缓冲区的长度
+                NULL);                                //回调窗体的句柄，一般为NULL
+            // 睡眠3.5秒
+            Sleep(3500);
+        }
+        else if(strcmp(say, "你在干什么，伊卡洛斯") == 0)
+        {
+            printf("这是作业death\n");
+            mciSendString("play sound\\1-3\\这是作业.mp3",        //MCI命令字符串
+                NULL,                                //存放反馈信息的缓冲区
+                0,                                    //缓冲区的长度
+                NULL);                                //回调窗体的句柄，一般为NULL
+            // 睡眠2秒
+            Sleep(2000);
+        }
     }
 
     // O
@@ -109,6 +186,20 @@ void reply(char* say)
                 NULL);                                //回调窗体的句柄，一般为NULL
             // 睡眠5秒
             Sleep(5000);
+        }
+    }
+
+    if(strstr(say, "普通") != NULL)
+    {
+        if(strcmp(say, "普通人会飞着去买东西吗") == 0)
+        {
+            printf("是的\n");
+            mciSendString("play sound\\1-3\\是的.mp3",        //MCI命令字符串
+                NULL,                                //存放反馈信息的缓冲区
+                0,                                    //缓冲区的长度
+                NULL);                                //回调窗体的句柄，一般为NULL
+            // 睡眠1秒
+            Sleep(1000);
         }
     }
 
@@ -140,13 +231,62 @@ void reply(char* say)
         }
     }
 
+    // X
+    if(strstr(say, "先") != NULL)
+    {
+        if(strcmp(say, "先把要买什么听了再说") == 0)
+        {
+            printf("好的，主人\n");
+            mciSendString("play sound\\1-3\\好的，主人3.mp3",        //MCI命令字符串
+                NULL,                                //存放反馈信息的缓冲区
+                0,                                    //缓冲区的长度
+                NULL);                                //回调窗体的句柄，一般为NULL
+            // 睡眠2秒
+            Sleep(2000);
+        }
+    }
+
     // Y
+    if(strstr(say, "要") != NULL)
+    {
+        if(strcmp(say, "要像普通人一样哦") == 0)
+        {
+            printf("好的，主人\n");
+            mciSendString("play sound\\1-3\\好的,主人2.mp3",        //MCI命令字符串
+                NULL,                                //存放反馈信息的缓冲区
+                0,                                    //缓冲区的长度
+                NULL);                                //回调窗体的句柄，一般为NULL
+            // 睡眠2秒
+            Sleep(2000);
+        }
+    }
+
     if(strstr(say, "伊卡洛斯") != NULL)
     {
         if(strcmp(say, "伊卡洛斯，你先回去，乖乖看家，知道了吗") == 0)
         {
             printf("那主人，这个给你\n");
             mciSendString("play sound\\1-2\\那主人，这个给你.mp3",        //MCI命令字符串
+                NULL,                                //存放反馈信息的缓冲区
+                0,                                    //缓冲区的长度
+                NULL);                                //回调窗体的句柄，一般为NULL
+            // 睡眠3秒
+            Sleep(3000);
+        }
+        else if(strcmp(say, "伊卡洛斯，你过去看看吧") == 0)
+        {
+            printf("好的，主人\n");
+            mciSendString("play sound\\1-3\\好的，主人.mp3",        //MCI命令字符串
+                NULL,                                //存放反馈信息的缓冲区
+                0,                                    //缓冲区的长度
+                NULL);                                //回调窗体的句柄，一般为NULL
+            // 睡眠2秒
+            Sleep(2000);
+        }
+        else if(strcmp(say, "伊卡洛斯，要不要尝试一下数学题") == 0)
+        {
+            printf("我吗\n");
+            mciSendString("play sound\\1-3\\我吗.mp3",        //MCI命令字符串
                 NULL,                                //存放反馈信息的缓冲区
                 0,                                    //缓冲区的长度
                 NULL);                                //回调窗体的句柄，一般为NULL
@@ -191,6 +331,21 @@ void reply(char* say)
                 NULL);                                //回调窗体的句柄，一般为NULL
             // 睡眠5秒
             Sleep(5000);
+        }
+    }
+
+    // #
+    if(strstr(say, "（") != NULL)
+    {
+        if(strcmp(say, "（笑）") == 0)
+        {
+            printf("主人为什么在笑呢\n");
+            mciSendString("play sound\\1-3\\主人为什么在笑呢.mp3",        //MCI命令字符串
+                NULL,                                //存放反馈信息的缓冲区
+                0,                                    //缓冲区的长度
+                NULL);                                //回调窗体的句柄，一般为NULL
+            // 睡眠3.5秒
+            Sleep(3500);
         }
     }
 
