@@ -1,4 +1,6 @@
 ## 相关说明
+视频讲解：[使用+教程]([https://www.bilibili.com/video/av82984935](https://www.bilibili.com/video/av82984935))
+
 开发环境：win10 ，VS Code 
 
 修改字符编码：GB2312

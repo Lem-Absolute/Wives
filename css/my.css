@@ -1,0 +1,46 @@
+body {
+	background:url("../img/1.jpg") top left;
+	background-size:100%;
+}
+
+#head {
+    height: 100px;
+}
+
+#center {
+	width: 1000px;
+	height: 750px;
+    margin: 0 auto;
+}
+
+#center #show_info {
+	height: 500px;
+}
+
+#center #info {
+	margin-left: 200px;
+	float: left;
+    width: 50%;
+}
+
+#center #btn_send {
+	margin-top: 20px;
+    margin-left: 50px;
+}
+
+/* bottom */
+#bottom {
+	padding: 10px;
+}
+
+#copyright {
+    color: #CCCCCC;
+	text-align: center;
+}
+
+#copyright_span {
+	font-size: 12px;
+	color: #666666;
+	letter-spacing: 0.86px;
+	text-align: justify;
+}
