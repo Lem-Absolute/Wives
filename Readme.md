@@ -1,4 +1,6 @@
 ## 相关说明
+web版本： [传送门](https://ikaros-521.gitee.io/wives/)
+
 视频讲解：[使用+教程]([https://www.bilibili.com/video/av82984935](https://www.bilibili.com/video/av82984935))
 
 开发环境：win10 ，VS Code 
