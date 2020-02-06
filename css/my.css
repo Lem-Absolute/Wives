@@ -9,12 +9,12 @@ body {
 
 #center {
 	width: 1000px;
-	height: 750px;
+	height: 800px;
     margin: 0 auto;
 }
 
 #center #show_info {
-	height: 500px;
+	height: 650px;
 }
 
 #center #info {
@@ -26,6 +26,17 @@ body {
 #center #btn_send {
 	margin-top: 20px;
     margin-left: 50px;
+}
+
+#help_div {
+	position: absolute;
+    left: 30px;
+    top: 90%;
+	cursor: pointer;
+}
+
+#help_div #help {
+	height: 50px;
 }
 
 /* bottom */

@@ -1,3 +1,8 @@
+function to_help()
+{
+	window.open("Readme.md");
+}
+
 // 播放对应音频
 function reply(str)
 {
