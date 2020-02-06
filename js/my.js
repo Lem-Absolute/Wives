@@ -1,6 +1,23 @@
-function to_help()
+$(document).ready(function() {
+	$("#child_window").hide();
+});
+
+var state = 0;
+
+// 跳转 说明页面
+function show_help()
 {
-	window.open("help.html");
+	if(state == 0)
+	{
+		state = 1;
+		$("#child_window").show(3000);
+	}
+	else
+	{
+		$("#child_window").hide(3000);
+		state = 0;
+	}
+	//window.open("help.html");
 }
 
 // 播放对应音频
@@ -19,6 +36,8 @@ function send_info()
 	// 获取输入框内容
 	var info = document.getElementById('info').value;
 	document.getElementById('info').value = "";
+	
+	//alert(info);
 	
 	// sound下音频文件路径二维数组
 	var reply_info = [
@@ -74,7 +93,7 @@ function send_info()
 		"1-13/目标多半是我，我将以主人讨厌的兵器战斗，不能再回到主人的身边，不能再一次.mp3", "1-13/那是？.mp3",
 		"1-13/妮姆芙的信号.mp3", "1-13/你醒了吗，主人.mp3", "1-13/是，主人.mp3", "1-13/是.mp3", "1-13/是2.mp3", "1-13/是3.mp3",
 		"1-13/是的，昨天一晚上没回来.mp3", "1-13/太好了.mp3", "1-13/我知道.mp3", "1-13/怎么了.mp3", "1-13/这个.mp3",
-		"1-13/主人，非常抱歉，一直以来欺骗你.mp3", "1-13/主人.mp3", "主人2.mp3", "1-13/最喜欢你了，我的主人，永别了.mp3"
+		"1-13/主人，非常抱歉，一直以来欺骗你.mp3", "1-13/主人.mp3", "1-13/主人2.mp3", "1-13/最喜欢你了，我的主人，永别了.mp3"
 		],
 		["1-14/没事的，不管发生什么，主人还是我的主人，从今往后一直都是.mp3", "1-14/人造天使，翅膀吸水会变重的.mp3",
 		"1-14/天降之物F.mp3", "一切正常，主人.mp3", "1-14/泳池被禁止使用，去换衣服了.mp3", "1-14/这是主人的命令.mp3",
@@ -1037,5 +1056,9 @@ function send_info()
             return;
         }
     }
+	
+	// 无搜索结果
+	reply("tip/音频库无对应回复.mp3");
+	return;
 	
 }

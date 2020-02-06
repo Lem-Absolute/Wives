@@ -33,6 +33,19 @@ body {
     margin-left: 50px;
 }
 
+#child_window {
+	position: absolute;
+    width: 630px;
+    height: 825px;
+    top: 10px;
+    left: 10px;
+}
+
+iframe {
+	width: 630px;
+    height: 825px;
+}
+
 #help_div {
 	position: absolute;
     left: 30px;
