@@ -1,6 +1,6 @@
 function to_help()
 {
-	window.open("Readme.md");
+	window.open("help.html");
 }
 
 // 播放对应音频
