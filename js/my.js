@@ -104,21 +104,24 @@ function send_info()
 	// A
 	if(info.indexOf("啊") != -1)
 	{
-		if(info == "啊？你在说什么")
+		if(info.indexOf("啊？你在说什么") != -1)
 		{
 			//从来没有看到过
+			$("#reply_span").text("从来没有看到过。从前，一直，没看到，妮姆芙，笑过");
 			reply(reply_info[11][8]);
 			//从前，一直，没看到，妮姆芙，笑过
 			reply(reply_info[11][9]);
 		}
-		else if(info == "啊，焦成一团黑了")
+		else if(info.indexOf("啊，焦成一团黑了") != -1)
 		{
 			//对不起
+			$("#reply_span").text("对不起");
 			reply(reply_info[12][7]);
 		}
-		else if(info == "啊嘞，大家呢")
+		else if(info.indexOf("啊嘞，大家呢") != -1)
 		{
 			//泳池被禁止使用，去换衣服了
+			$("#reply_span").text("泳池被禁止使用，去换衣服了");
 			reply(reply_info[13][4]);
 		}
 		return;
@@ -127,9 +130,10 @@ function send_info()
 	// B
 	if(info.indexOf("把") != -1)
 	{
-		if(info == "把西瓜带回来了吗")
+		if(info.indexOf("把西瓜带回来了吗") != -1)
 		{
 			//是的3
+			$("#reply_span").text("是的");
 			reply(reply_info[2][7]);
 		}
 		return;
@@ -137,24 +141,28 @@ function send_info()
 	
 	if(info.indexOf("不") != -1)
 	{
-		if(info == "不觉得麻烦吗")
+		if(info.indexOf("不觉得麻烦吗") != -1)
 		{
 			//不，没事的
+			$("#reply_span").text("不，没事的");
 			reply(reply_info[1][0]);
 		}
-		else if(info == "不会的是吧")
+		else if(info.indexOf("不会的是吧") != -1)
 		{
 			//是的2
+			$("#reply_span").text("是的");
 			reply(reply_info[2][6]);
 		}
-		else if(info == "不要太在意")
+		else if(info.indexOf("不要太在意") != -1)
 		{
 			//好的
+			$("#reply_span").text("好的");
 			reply(reply_info[4][2]);
 		}
-		else if(info == "不能勉强说谎哦")
+		else if(info.indexOf("不能勉强说谎哦") != -1)
 		{
 			//说谎不行吗
+			$("#reply_span").text("说谎不行吗");
 			reply(reply_info[10][3]);
 		}
 		return;
@@ -162,9 +170,10 @@ function send_info()
 	
 	if(info.indexOf("拜托") != -1)
 	{
-		if(info == "拜托你了，伊卡洛斯，救救妮姆芙")
+		if(info.indexOf("拜托你了，伊卡洛斯，救救妮姆芙") != -1)
 		{
 			//type阿尔法，伊卡洛斯，出击
+			$("#reply_span").text("type阿尔法，伊卡洛斯，出击");
 			reply(reply_info[12][5]);
 		}
 		return;
@@ -173,9 +182,10 @@ function send_info()
 	// C
 	if(info.indexOf("楚原") != -1)
 	{
-		if(info == "楚原呢")
+		if(info.indexOf("楚原呢") != -1)
 		{
 			//在家里面
+			$("#reply_span").text("在家里面");
 			reply(reply_info[3][2]);
 		}
 		return;
@@ -183,9 +193,10 @@ function send_info()
 	
 	if(info.indexOf("才") != -1)
 	{
-		if(info == "才不是")
+		if(info.indexOf("才不是") != -1)
 		{
 			//是
+			$("#reply_span").text("是");
 			reply(reply_info[5][6]);
 		}
 		return;
@@ -193,17 +204,19 @@ function send_info()
 	
 	if(info.indexOf("差") != -1)
 	{
-		if(info == "差不多该回去了")
+		if(info.indexOf("差不多该回去了") != -1)
 		{
 			//是
+			$("#reply_span").text("是");
 			reply(reply_info[5][8]);
 		}
 		return;
 	}
 	
-	if(info == "赤色的花，白色的花")
+	if(info.indexOf("赤色的花，白色的花") != -1)
 	{
 		//赤色的花，白色的花
+		$("#reply_span").text("赤色的花，白色的花");
 		reply(reply_info[11][7]);
 		return;
 	}
@@ -211,9 +224,9 @@ function send_info()
 	// D
     if(info.indexOf("都") != -1)
     {
-        if(info == "都是伊卡洛斯的功劳呢")
+        if(info.indexOf("都是伊卡洛斯的功劳呢") != -1)
         {
-            //printf("不，是因为大家的演奏，我才能唱的\n");
+            $("#reply_span").text("不，是因为大家的演奏，我才能唱的");
 			reply(reply_info[9][2]);
             return;
         }
@@ -221,9 +234,9 @@ function send_info()
 
     if(info.indexOf("对") != -1)
     {
-        if(info == "对，只要表情就行")
+        if(info.indexOf("对，只要表情就行") != -1)
         {
-            //printf("这样如何，主人\n");
+            $("#reply_span").text("这样如何，主人");
 			reply(reply_info[11][32]);
             return;
         }
@@ -231,9 +244,9 @@ function send_info()
 
     if(info.indexOf("打") != -1)
     {
-        if(info == "打电话拜托在买东西的智树这样的话")
+        if(info.indexOf("打电话拜托在买东西的智树这样的话") != -1)
         {
-            //printf("不用，但是\n");
+            $("#reply_span").text("不用，但是");
 			reply(reply_info[12][6]);
             return;
         }
@@ -241,9 +254,9 @@ function send_info()
 
     if(info.indexOf("多") != -1)
     {
-        if(info == "多亏了你，现在可以拯救朋友了")
+        if(info.indexOf("多亏了你，现在可以拯救朋友了") != -1)
         {
-            //printf("是，主人\n");
+            $("#reply_span").text("是，主人");
 			reply(reply_info[12][17]);
             return;
         }
@@ -254,17 +267,17 @@ function send_info()
     // F
     if(info.indexOf("放") != -1)
     {
-        if(info == "放开我的手")
+        if(info.indexOf("放开我的手") != -1)
         {
-            //printf("没事的，人的背后有看不见的，很大的翅膀。在那其中，主人有很大的翅膀，我知道的，不知道怎么说，但我知道...主人被天空召唤着\n");
+            $("#reply_span").text("没事的，人的背后有看不见的，很大的翅膀。在那其中，主人有很大的翅膀，我知道的，不知道怎么说，但我知道...主人被天空召唤着");
 			reply(reply_info[6][0]);
             return;
         }
     }
 
-    if(info == "fallen down" || info == "FALLEN DOWN")
+    if(info.indexOf("fallen down") != -1 || info.indexOf("FALLEN DOWN") != -1)
     {
-        //printf("曲名为：《fallen down》\n");
+        $("#reply_span").text("曲名为：《fallen down》");
 		reply(reply_info[9][0]);
         return;
     }
@@ -273,9 +286,9 @@ function send_info()
     // G
     if(info.indexOf("命令") != -1)
     {
-        if(info == "刚才的命令不算好吗")
+        if(info.indexOf("刚才的命令不算好吗") != -1)
         {
-            //printf("无法中止命令\n");
+            $("#reply_span").text("无法中止命令");
 			reply(reply_info[0][6]);
             return;
         }
@@ -284,9 +297,9 @@ function send_info()
     // H
     if(info.indexOf("还") != -1)
     {
-        if(info == "还需要练习呢")
+        if(info.indexOf("还需要练习呢") != -1)
         {
-            //printf("对不起\n");
+            $("#reply_span").text("对不起");
 			reply(reply_info[2][0]);
             return;
         }
@@ -294,9 +307,9 @@ function send_info()
 
     if(info.indexOf("好") != -1)
     {
-        if(info == "好，今天已经睡醒了")
+        if(info.indexOf("好，今天已经睡醒了") != -1)
         {
-            //printf("诶\n");
+            $("#reply_span").text("诶");
 			reply(reply_info[5][1]);
             return;
         }
@@ -304,9 +317,9 @@ function send_info()
 
     if(info.indexOf("话") != -1)
     {
-        if(info == "话先说在前头，你们两个千万不要来学校哦")
+        if(info.indexOf("话先说在前头，你们两个千万不要来学校哦") != -1)
         {
-            //printf("是\n");
+            $("#reply_span").text("是");
 			reply(reply_info[6][4]);
             return;
         }
@@ -317,9 +330,9 @@ function send_info()
     // J
     if(info.indexOf("脚") != -1)
     {
-        if(info == "脚踢起来，我牵着你的手呢")
+        if(info.indexOf("脚踢起来，我牵着你的手呢") != -1)
         {
-            //printf("这样吗，主人\n");
+            $("#reply_span").text("这样吗，主人");
 			reply(reply_info[5][11]);
             return;
         }
@@ -327,9 +340,9 @@ function send_info()
 
     if(info.indexOf("尽") != -1)
     {
-        if(info == "尽情地舒展一下翅膀吧")
+        if(info.indexOf("尽情地舒展一下翅膀吧") != -1)
         {
-            //printf("是\n");
+            $("#reply_span").text("是");
 			reply(reply_info[5][7]);
             return;
         }
@@ -338,15 +351,15 @@ function send_info()
     // K
     if(info.indexOf("卡片") != -1)
     {
-        if(info == "卡片是什么")
+        if(info.indexOf("卡片是什么") != -1)
         {
-            //printf("（解释）\n");
+            $("#reply_span").text("（解释）");
 			reply(reply_info[0][2]);
             return;
         }
-        else if(info == "卡片还能做什么")
+        else if(info.indexOf("卡片还能做什么") != -1)
         {
-            //printf("什么都可以\n");
+            $("#reply_span").text("什么都可以");
 			reply(reply_info[0][4]);
             return;
         }
@@ -354,9 +367,9 @@ function send_info()
 
     if(info.indexOf("快") != -1)
     {
-        if(info == "快点回去睡觉")
+        if(info.indexOf("快点回去睡觉") != -1)
         {
-            //printf("那个，主人，睡觉是怎么一回事。我们人造天使没有被设定睡觉这一功能，所以不知道睡觉、做梦是怎么一回事\n");
+            $("#reply_span").text("那个，主人，睡觉是怎么一回事。我们人造天使没有被设定睡觉这一功能，所以不知道睡觉、做梦是怎么一回事");
 			reply(reply_info[5][4]);
             return;
         }
@@ -364,9 +377,9 @@ function send_info()
 
     if(info.indexOf("可") != -1)
     {
-        if(info == "可能会抢走智树也没关系吗")
+        if(info.indexOf("可能会抢走智树也没关系吗") != -1)
         {
-            //printf("没事的，不管发生什么，主人还是我的主人，从今往后一直都是\n");
+            $("#reply_span").text("没事的，不管发生什么，主人还是我的主人，从今往后一直都是");
 			reply(reply_info[13][0]);
             return;
         }
@@ -377,9 +390,9 @@ function send_info()
     // M
     if(info.indexOf("没") != -1)
     {
-        if(info == "没事吧，怎么伤痕累累的")
+        if(info.indexOf("没事吧，怎么伤痕累累的") != -1)
         {
-            //printf("没事的\n");
+            $("#reply_span").text("没事的");
 			reply(reply_info[7][2]);
             return;
         }
@@ -387,9 +400,9 @@ function send_info()
 
     if(info.indexOf("马上") != -1)
     {
-        if(info == "马上正式比赛了，多练习一下")
+        if(info.indexOf("马上正式比赛了，多练习一下") != -1)
         {
-            //printf("对不起，主人\n");
+            $("#reply_span").text("对不起，主人");
 			reply(reply_info[9][3]);
             return;
         }
@@ -397,9 +410,9 @@ function send_info()
 
     if(info.indexOf("嘛") != -1)
     {
-        if(info == "嘛，笑一下很简单的事情")
+        if(info.indexOf("嘛，笑一下很简单的事情") != -1)
         {
-            //printf("不简单，因为，我从没见过，妮姆芙你笑过\n");
+            $("#reply_span").text("不简单，因为，我从没见过，妮姆芙你笑过");
 			reply(reply_info[11][6]);
             return;
         }
@@ -408,81 +421,81 @@ function send_info()
     // N
     if(info.indexOf("那") != -1)
     {
-        if(info == "那我出门了")
+        if(info.indexOf("那我出门了") != -1)
         {
-            //printf("好的，主人\n");
+            $("#reply_span").text("好的，主人");
 			reply(reply_info[1][2]);
             return;
         }
-        else if(info == "那么，伊卡洛斯，笔直回家，好吗")
+        else if(info.indexOf("那么，伊卡洛斯，笔直回家，好吗") != -1)
         {
-            //printf("好的，主人\n");
+            $("#reply_span").text("好的，主人");
 			reply(reply_info[1][1]);
             return;
         }
-        else if(info == "那当然是因为开心咯")
+        else if(info.indexOf("那当然是因为开心咯") != -1)
         {
-            //printf("开心？开心\n");
+            $("#reply_span").text("开心？开心");
             reply(reply_info[2][4]);
             return;
         }
-        else if(info == "那么，走吧，伊卡洛斯")
+        else if(info.indexOf("那么，走吧，伊卡洛斯") != -1)
         {
-            //printf("但是，主人他。。。\n");
+            $("#reply_span").text("但是，主人他。。。");
             reply(reply_info[3][0]);
             return;
         }
-        else if(info == "那个，伊卡洛斯")
+        else if(info.indexOf("那个，伊卡洛斯") != -1)
         {
-            //printf("在的，主人\n");
+            $("#reply_span").text("在的，主人");
             reply(reply_info[4][3]);
             return;
         }
-        else if(info == "那你在我睡觉的时候都在干什么呢")
+        else if(info.indexOf("那你在我睡觉的时候都在干什么呢") != -1)
         {
-            //printf("一直在主人身旁，在主人睡醒前，一直\n");
+            $("#reply_span").text("一直在主人身旁，在主人睡醒前，一直");
             reply(reply_info[5][10]);
             return;
         }
-        else if(info == "那我出门了，看家拜托了")
+        else if(info.indexOf("那我出门了，看家拜托了") != -1)
         {
-            //printf("是，主人\n");
+            $("#reply_span").text("是，主人");
             reply(reply_info[6][1]);
             return;
         }
-        else if(info == "那我出发了")
+        else if(info.indexOf("那我出发了") != -1)
         {
-            //printf("是，主人\n");
+            $("#reply_span").text("是，主人");
            reply(reply_info[6][2]);
             return;
         }
-        else if(info == "那这样的事，不要做第二次了")
+        else if(info.indexOf("那这样的事，不要做第二次了") != -1)
         {
-            //printf("诶？\n");
+            $("#reply_span").text("诶？");
             reply(reply_info[7][1]);
             return;
         }
-        else if(info == "那么，伊卡洛斯，把带着的卡片全部交出来")
+        else if(info.indexOf("那么，伊卡洛斯，把带着的卡片全部交出来") != -1)
         {
-            //printf("是\n");
+            $("#reply_span").text("是");
             reply(reply_info[10][2]);
             return;
         }
-        else if(info == "那么，阿尔法，稍微会笑一点了吗")
+        else if(info.indexOf("那么，阿尔法，稍微会笑一点了吗") != -1)
         {
-            //printf("不，还没有\n");
+            $("#reply_span").text("不，还没有");
             reply(reply_info[11][5]);
             return;
         }
-        else if(info == "那一起想办法吧，如何才能让我们人造天使笑，呐")
+        else if(info.indexOf("那一起想办法吧，如何才能让我们人造天使笑，呐") != -1)
         {
-            //printf("恩\n");
+            $("#reply_span").text("恩");
             reply(reply_info[11][16]);
             return;
         }
-        else if(info == "那样的人生来就是杀人的道具，太过分了")
+        else if(info.indexOf("那样的人生来就是杀人的道具，太过分了") != -1)
         {
-            //printf("是\n");
+            $("#reply_span").text("是");
             reply(reply_info[12][20]);
             return;
         }
@@ -491,69 +504,69 @@ function send_info()
 
     if(info.indexOf("你") != -1)
     {
-        if(info == "你是怎么去亚马逊的")
+        if(info.indexOf("你是怎么去亚马逊的") != -1)
         {
-            //printf("我是以24马赫的速度飞过去的\n");
+            $("#reply_span").text("我是以24马赫的速度飞过去的");
             reply(reply_info[2][10]);
             return;
         }
-        else if(info == "你在干什么，伊卡洛斯")
+        else if(info.indexOf("你在干什么，伊卡洛斯") != -1)
         {
-            //printf("这是作业death\n");
+            $("#reply_span").text("这是作业death");
             reply(reply_info[2][11]);
             return;
         }
-        else if(info == "你怎么在这")
+        else if(info.indexOf("你怎么在这") != -1)
         {
-            //printf("是\n");
+            $("#reply_span").text("是");
             reply(reply_info[5][5]);
             return;
         }
-        else if(info == "你一直珍惜的西瓜，大概里面早就烂掉了，一团糟了呢")
+        else if(info.indexOf("你一直珍惜的西瓜，大概里面早就烂掉了，一团糟了呢") != -1)
         {
-            //printf("啊\n");
+            $("#reply_span").text("啊");
             reply(reply_info[5][0]);
             return;
         }
-        else if(info == "你还是这样子好")
+        else if(info.indexOf("你还是这样子好") != -1)
         {
-            //printf("嗯？\n");
+            $("#reply_span").text("嗯？");
             reply(reply_info[5][2]);
             return;
         }
-        else if(info == "你是知道没事的，才帮我挡子弹的吗")
+        else if(info.indexOf("你是知道没事的，才帮我挡子弹的吗") != -1)
         {
-            //printf("不，没想到自己也\n");
+            $("#reply_span").text("不，没想到自己也");
             reply(reply_info[7][0]);
             return;
         }
-        else if(info == "你是什么")
+        else if(info.indexOf("你是什么") != -1)
         {
-            //printf("我是，人类death\n");
+            $("#reply_span").text("我是，人类death");
             reply(reply_info[8][3]);
             return;
         }
-        else if(info == "你在做什么")
+        else if(info.indexOf("你在做什么") != -1)
         {
-            //printf("妮姆芙，这里的天空很广阔哦\n");
+            $("#reply_span").text("妮姆芙，这里的天空很广阔哦");
             reply(reply_info[9][7]);
             return;
         }
-        else if(info == "你是战斗特化的天使，没有那方面的机能吧")
+        else if(info.indexOf("你是战斗特化的天使，没有那方面的机能吧") != -1)
         {
-            //printf("是因为我是战斗用的原因\n");
+            $("#reply_span").text("是因为我是战斗用的原因");
             reply(reply_info[11][25]);
             return;
         }
-        else if(info == "你要去哪里，伊卡洛斯")
+        else if(info.indexOf("你要去哪里，伊卡洛斯") != -1)
         {
-            //printf("就是，那个，去买个东西\n");
+            $("#reply_span").text("就是，那个，去买个东西");
             reply(reply_info[12][10]);
             return;
         }
-        else if(info == "你刚才笑了一下吧")
+        else if(info.indexOf("你刚才笑了一下吧") != -1)
         {
-            //printf("诶\n");
+            $("#reply_span").text("诶");
             reply(reply_info[12][8]);
             return;
         }
@@ -561,21 +574,21 @@ function send_info()
 
     if(info.indexOf("呐") != -1)
     {
-        if(info == "呐，伊卡洛斯")
+        if(info.indexOf("呐，伊卡洛斯") != -1)
         {
-            //printf("是\n");
+            $("#reply_span").text("是");
             reply(reply_info[5][9]);
             return;
         }
-        else if(info == "呐，伊卡洛斯，我们约定过不说谎的吧")
+        else if(info.indexOf("呐，伊卡洛斯，我们约定过不说谎的吧") != -1)
         {
-            //printf("呵嗯\n");
+            $("#reply_span").text("呵嗯");
             reply(reply_info[12][9]);
             return;
         }
-        else if(info == "呐，伊卡洛斯，我讨厌兵器是因为我觉得你太可怜了")
+        else if(info.indexOf("呐，伊卡洛斯，我讨厌兵器是因为我觉得你太可怜了") != -1)
         {
-            //printf("是\n");
+            $("#reply_span").text("是");
             reply(reply_info[12][19]);
             return;
         }
@@ -583,21 +596,21 @@ function send_info()
 
     if(info.indexOf("妮姆芙") != -1)
     {
-        if(info == "妮姆芙为什么回来了")
+        if(info.indexOf("妮姆芙为什么回来了") != -1)
         {
-            //printf("我什么也不知道\n");
+            $("#reply_span").text("我什么也不知道");
             reply(reply_info[8][2]);
             return;
         }
-        else if(info == "妮姆芙呢")
+        else if(info.indexOf("妮姆芙呢") != -1)
         {
-            //printf("这个\n");
+            $("#reply_span").text("这个");
             reply(reply_info[12][25]);
             return;
         }
-        else if(info == "妮姆芙又没有回来吗")
+        else if(info.indexOf("妮姆芙又没有回来吗") != -1)
         {
-            //printf("是的，昨天一晚上没回来\n");
+            $("#reply_span").text("是的，昨天一晚上没回来");
             reply(reply_info[12][21]);
             return;
         }
@@ -605,9 +618,9 @@ function send_info()
 
     if(info.indexOf("n") != -1)
     {
-        if(info == "nico")
+        if(info.indexOf("nico") != -1)
         {
-            //printf("ni a li\n");
+            $("#reply_span").text("ni a li");
             reply(reply_info[11][1]);
             return;
         }
@@ -618,9 +631,9 @@ function send_info()
     // P
     if(info.indexOf("胖次") != -1)
     {
-        if(info == "胖次嘎")
+        if(info.indexOf("胖次嘎") != -1)
         {
-            //printf("胖次是吗，那么把半径xxkm内的胖次全部收集起来\n");
+            $("#reply_span").text("胖次是吗，那么把半径xxkm内的胖次全部收集起来");
             reply(reply_info[1][4]);
             return;
         }
@@ -628,9 +641,9 @@ function send_info()
 
     if(info.indexOf("普通") != -1)
     {
-        if(info == "普通人会飞着去买东西吗")
+        if(info.indexOf("普通人会飞着去买东西吗") != -1)
         {
-            //printf("是的\n");
+            $("#reply_span").text("是的");
             reply(reply_info[2][5]);
             return;
         }
@@ -638,9 +651,9 @@ function send_info()
 
     if(info.indexOf("骗") != -1)
     {
-        if(info == "骗了你很抱歉，其实我想要把你带回天上")
+        if(info.indexOf("骗了你很抱歉，其实我想要把你带回天上") != -1)
         {
-            //printf("我知道\n");
+            $("#reply_span").text("我知道");
             reply(reply_info[12][23]);
             return;
         }
@@ -651,9 +664,9 @@ function send_info()
     // R
     if(info.indexOf("人") != -1)
     {
-        if(info == "人类都有一两个秘密，不是吗")
+        if(info.indexOf("人类都有一两个秘密，不是吗") != -1)
         {
-            //printf("主人！\n");
+            $("#reply_span").text("主人！");
             reply(reply_info[10][10]);
             return;
         }
@@ -661,9 +674,9 @@ function send_info()
 
     if(info.indexOf("如") != -1)
     {
-        if(info == "如果可以逃走的话，智树会感到高兴的吧")
+        if(info.indexOf("如果可以逃走的话，智树会感到高兴的吧") != -1)
         {
-            //printf("主人，他会，感到高兴\n");
+            $("#reply_span").text("主人，他会，感到高兴");
             reply(reply_info[11][35]);
             return;
         }
@@ -672,9 +685,9 @@ function send_info()
     // S
     if(info.indexOf("可") != -1)
     {
-        if(info == "什么都可以吗")
+        if(info.indexOf("什么都可以吗") != -1)
         {
-            //printf("是的\n");
+            $("#reply_span").text("是的");
             reply(reply_info[0][5]);
             return;
         }
@@ -682,9 +695,9 @@ function send_info()
 
     if(info.indexOf("算") != -1)
     {
-        if(info == "算了，你们两个明天也来学校，知道了吗，就是这么回事")
+        if(info.indexOf("算了，你们两个明天也来学校，知道了吗，就是这么回事") != -1)
         {
-            //printf("是，主人\n");
+            $("#reply_span").text("是，主人");
             reply(reply_info[6][2]);
             return;
         }
@@ -692,9 +705,9 @@ function send_info()
 
     if(info.indexOf("是") != -1)
     {
-        if(info == "是这样吗，伊卡洛斯")
+        if(info.indexOf("是这样吗，伊卡洛斯") != -1)
         {
-            //printf("是\n");
+            $("#reply_span").text("是");
             reply(reply_info[8][1]);
             return;
         }
@@ -703,24 +716,24 @@ function send_info()
     // W
     if(info.indexOf("晚安") != -1)
     {
-        if(info == "晚安")
+        if(info.indexOf("晚安") != -1)
         {
-            //printf("晚安，我的主人\n");
+            $("#reply_span").text("晚安，我的主人");
             return;
         }
     }
 
     if(info.indexOf("为") != -1)
     {
-        if(info == "为什么你在这")
+        if(info.indexOf("为什么你在这") != -1)
         {
-            //printf("班上的朋友怎么都拜托我帮忙\n");
+            $("#reply_span").text("班上的朋友怎么都拜托我帮忙");
             reply(reply_info[9][1]);
             return;
         }
-        else if(info == "为什么这些动物被关在笼子里呢")
+        else if(info.indexOf("为什么这些动物被关在笼子里呢") != -1)
         {
-            //printf("sa（谁知道呢）\n");
+            $("#reply_span").text("sa（谁知道呢）");
             reply(reply_info[11][26]);
             return;
         }
@@ -728,17 +741,17 @@ function send_info()
 
     if(info.indexOf("我") != -1)
     {
-        if(info == "我一直把伊卡洛斯当成普通的人类，忘记你是人造天使的事情了")
+        if(info.indexOf("我一直把伊卡洛斯当成普通的人类，忘记你是人造天使的事情了") != -1)
         {
-            //printf("我很高兴，楚原把我当普通人来对待\n");
+            $("#reply_span").text("我很高兴，楚原把我当普通人来对待");
             reply(reply_info[10][4]);
             return;
         }
-        else if(info == "我们人造天使，可能从来没有发自内心的笑过吧")
+        else if(info.indexOf("我们人造天使，可能从来没有发自内心的笑过吧") != -1)
         {
-            //printf("并且最近，一直在为什么烦恼的样子\n");
+            $("#reply_span").text("并且最近，一直在为什么烦恼的样子");
             reply(reply_info[11][4]);
-            //printf("那是为什么，我也不清楚\n");
+            $("#reply_span").text("那是为什么，我也不清楚");
             reply(reply_info[11][22]);
             return;
         }
@@ -746,11 +759,11 @@ function send_info()
 
     if(info.indexOf("喂") != -1)
     {
-        if(info == "喂，伊卡洛斯")
+        if(info.indexOf("喂，伊卡洛斯") != -1)
         {
-            //printf("是，主人\n");
+            $("#reply_span").text("是，主人");
             reply(reply_info[11][15]);
-            //printf("早上好，主人\n");
+            $("#reply_span").text("早上好，主人");
             reply(reply_info[11][21]);
             return;
         }
@@ -759,9 +772,9 @@ function send_info()
     // X
     if(info.indexOf("先") != -1)
     {
-        if(info == "先把要买什么听了再说")
+        if(info.indexOf("先把要买什么听了再说") != -1)
         {
-            //printf("好的，主人\n");
+            $("#reply_span").text("好的，主人");
             reply(reply_info[2][3]);
             return;
         }
@@ -770,9 +783,9 @@ function send_info()
     // Y
     if(info.indexOf("要") != -1)
     {
-        if(info == "要像普通人一样哦")
+        if(info.indexOf("要像普通人一样哦") != -1)
         {
-            //printf("好的，主人\n");
+            $("#reply_span").text("好的，主人");
             reply(reply_info[2][2]);
             return;
         }
@@ -780,45 +793,45 @@ function send_info()
 
     if(info.indexOf("伊卡洛斯") != -1)
     {
-        if(info == "伊卡洛斯，你先回去，乖乖看家，知道了吗")
+        if(info.indexOf("伊卡洛斯，你先回去，乖乖看家，知道了吗") != -1)
         {
-            //printf("那主人，这个给你\n");
+            $("#reply_span").text("那主人，这个给你");
             reply(reply_info[1][3]);
             return;
         }
-        else if(info == "伊卡洛斯，你过去看看吧")
+        else if(info.indexOf("伊卡洛斯，你过去看看吧") != -1)
         {
-            //printf("好的，主人\n");
+            $("#reply_span").text("好的，主人");
             reply(reply_info[2][1]);
             return;
         }
-        else if(info == "伊卡洛斯，要不要尝试一下数学题")
+        else if(info.indexOf("伊卡洛斯，要不要尝试一下数学题") != -1)
         {
-            //printf("我吗\n");
+            $("#reply_span").text("我吗");
             reply(reply_info[2][9]);
             return;
         }
-        else if(info == "伊卡洛斯，背后的翅膀怎么了")
+        else if(info.indexOf("伊卡洛斯，背后的翅膀怎么了") != -1)
         {
-            //printf("那个，这个翅膀是可变式羽翼，可以缩小到这种程度的大小\n");
+            $("#reply_span").text("那个，这个翅膀是可变式羽翼，可以缩小到这种程度的大小");
             reply(reply_info[5][3]);
             return;
         }
-        else if(info == "伊卡洛斯！")
+        else if(info.indexOf("伊卡洛斯！") != -1)
         {
-            //printf("是\n");
+            $("#reply_span").text("是");
             reply(reply_info[7][4]);
             return;
         }
-        else if(info == "伊卡洛斯，你试试万岁看看")
+        else if(info.indexOf("伊卡洛斯，你试试万岁看看") != -1)
         {
-            //printf("万岁是吗\n");
+            $("#reply_span").text("万岁是吗");
             reply(reply_info[11][27]);
             return;
         }
-        else if(info == "伊卡洛斯，不用那么快，停，停")
+        else if(info.indexOf("伊卡洛斯，不用那么快，停，停") != -1)
         {
-            //printf("是\n");
+            $("#reply_span").text("是");
             reply(reply_info[12][18]);
             return;
         }
@@ -826,9 +839,9 @@ function send_info()
 
     if(info.indexOf("已经") != -1)
     {
-        if(info == "已经没你事了，乖乖待着")
+        if(info.indexOf("已经没你事了，乖乖待着") != -1)
         {
-            //printf("是，主人\n");
+            $("#reply_span").text("是，主人");
             reply(reply_info[7][3]);
             return;
         }
@@ -836,9 +849,9 @@ function send_info()
 
     if(info.indexOf("有") != -1)
     {
-        if(info == "有什么隐情吗")
+        if(info.indexOf("有什么隐情吗") != -1)
         {
-            //printf("人类是说谎的生物，我是普通的人类death\n");
+            $("#reply_span").text("人类是说谎的生物，我是普通的人类death");
             reply(reply_info[8][0]);
             return;
         }
@@ -846,9 +859,9 @@ function send_info()
 
     if(info.indexOf("约") != -1)
     {
-        if(info == "约会呢，回到家，才算约会")
+        if(info.indexOf("约会呢，回到家，才算约会") != -1)
         {
-            //printf("是\n");
+            $("#reply_span").text("是");
             reply(reply_info[11][24]);
             return;
         }
@@ -856,9 +869,9 @@ function send_info()
 
     if(info.indexOf("又") != -1)
     {
-        if(info == "又是那个奇怪的梦嘎")
+        if(info.indexOf("又是那个奇怪的梦嘎") != -1)
         {
-            //printf("你醒了吗，主人\n");
+            $("#reply_span").text("你醒了吗，主人");
             reply(reply_info[12][16]);
             return;
         }
@@ -867,9 +880,9 @@ function send_info()
     // Z
     if(info.indexOf("在") != -1)
     {
-        if(info == "在旁边的海里随便捡点海货过来吧")
+        if(info.indexOf("在旁边的海里随便捡点海货过来吧") != -1)
         {
-            //printf("好的，主人\n");
+            $("#reply_span").text("好的，主人");
             reply(reply_info[1][1]);
             return;
         }
@@ -877,9 +890,9 @@ function send_info()
 
     if(info.indexOf("早") != -1)
     {
-        if(info == "早上好")
+        if(info.indexOf("早上好") != -1)
         {
-            //printf("早上好，主人\n");
+            $("#reply_span").text("早上好，主人");
             reply(reply_info[0][7]);
             return;
         }
@@ -887,50 +900,50 @@ function send_info()
 
     if(info.indexOf("怎么") != -1)
     {
-        if(info == "怎么了")
+        if(info.indexOf("怎么了") != -1)
         {
             var flag = 0;
             if(flag)
             {
-                //printf("主人遇到麻烦了\n");
+                $("#reply_span").text("主人遇到麻烦了");
                 reply(reply_info[3][3]);
                 return;
             }
             else if(flag == 1)
             {
-                //printf("没什么\n");
+                $("#reply_span").text("没什么");
                 reply(reply_info[9][6]);
                 return;
             }
             
         }
-        else if(info == "怎么了，没什么精神呢")
+        else if(info.indexOf("怎么了，没什么精神呢") != -1)
         {
-            //printf("我一点都帮不上主人的忙\n");
+            $("#reply_span").text("我一点都帮不上主人的忙");
             reply(reply_info[9][10]);
             return;
         }
-        else if(info == "怎么样，这套内衣")
+        else if(info.indexOf("怎么样，这套内衣") != -1)
         {
-            //printf("非常可爱哦，主人\n");
+            $("#reply_span").text("非常可爱哦，主人");
             reply(reply_info[10][0]);
             return;
         }
-        else if(info == "怎么了，伊卡洛斯")
+        else if(info.indexOf("怎么了，伊卡洛斯") != -1)
         {
-            //printf("没什么\n");
+            $("#reply_span").text("没什么");
             reply(reply_info[12][12]);
             return;
         }
-        else if(info == "怎么了，伊卡洛斯，又是不好的玩笑是吗")
+        else if(info.indexOf("怎么了，伊卡洛斯，又是不好的玩笑是吗") != -1)
         {
-            //printf("最喜欢你了，我的主人，永别了\n");
+            $("#reply_span").text("最喜欢你了，我的主人，永别了");
             reply(reply_info[12][29]);
             return;
         }
-        else if(info == "怎么样，伊卡洛斯")
+        else if(info.indexOf("怎么样，伊卡洛斯") != -1)
         {
-            //printf("太好了\n");
+            $("#reply_span").text("太好了");
             reply(reply_info[12][22]);
             return;
         }
@@ -938,27 +951,27 @@ function send_info()
 
     if(info.indexOf("这") != -1)
     {
-        if(info == "这个锁链如何是好")
+        if(info.indexOf("这个锁链如何是好") != -1)
         {
-            //printf("那个，锁链可以自由控制...\n");
+            $("#reply_span").text("那个，锁链可以自由控制...");
             reply(reply_info[1][6]);
             return;
         }
-        else if(info == "这就解决了吗")
+        else if(info.indexOf("这就解决了吗") != -1)
         {
-            //printf("是的，这张卡片自动结束了，已经没事了death\n");
+            $("#reply_span").text("是的，这张卡片自动结束了，已经没事了death");
             reply(reply_info[1][5]);
             return;
         }
-        else if(info == "这才是正式表演，伊卡洛斯")
+        else if(info.indexOf("这才是正式表演，伊卡洛斯") != -1)
         {
-            //printf("曲名为：《fallen down》\n");
+            $("#reply_span").text("曲名为：《fallen down》");
             reply(reply_info[9][0]);
             return;
         }
-        else if(info == "这些孩子们从这里出去，变得自由后，会不会感觉到开心呢")
+        else if(info.indexOf("这些孩子们从这里出去，变得自由后，会不会感觉到开心呢") != -1)
         {
-            //printf("诶\n");
+            $("#reply_span").text("诶");
             reply(reply_info[11][14]);
             return;
         }
@@ -966,9 +979,9 @@ function send_info()
 
     if(info.indexOf("至今") != -1)
     {
-        if(info == "至今为止没和朋友去购过物吗")
+        if(info.indexOf("至今为止没和朋友去购过物吗") != -1)
         {
-            //printf("朋友？我没有朋友\n");
+            $("#reply_span").text("朋友？我没有朋友");
             reply(reply_info[3][1]);
             return;
         }
@@ -976,9 +989,9 @@ function send_info()
 
     if(info.indexOf("走") != -1)
     {
-        if(info == "走吧，伊卡洛斯")
+        if(info.indexOf("走吧，伊卡洛斯") != -1)
         {
-            //printf("好的，主人\n");
+            $("#reply_span").text("好的，主人");
             reply(reply_info[4][0]);
             return;
         }
@@ -986,15 +999,15 @@ function send_info()
 
     if(info.indexOf("做") != -1)
     {
-        if(info == "做这种事，不会被人当成傻瓜吗")
+        if(info.indexOf("做这种事，不会被人当成傻瓜吗") != -1)
         {
-            //printf("这是主人的命令呢\n");
+            $("#reply_span").text("这是主人的命令呢");
             reply(reply_info[10][9]);
             return;
         }
-        else if(info == "做这种事，不觉得很傻吗")
+        else if(info.indexOf("做这种事，不觉得很傻吗") != -1)
         {
-            //printf("这是主人的命令\n");
+            $("#reply_span").text("这是主人的命令");
             reply(reply_info[13][5]);
             return;
         }
@@ -1002,9 +1015,9 @@ function send_info()
 
     if(info.indexOf("真") != -1)
     {
-        if(info == "真羡慕你呢，没有什么烦恼")
+        if(info.indexOf("真羡慕你呢，没有什么烦恼") != -1)
         {
-            //printf("没那回事\n");
+            $("#reply_span").text("没那回事");
             reply(reply_info[10][1]);
             return;
         }
@@ -1012,9 +1025,9 @@ function send_info()
 
     if(info.indexOf("只") != -1)
     {
-        if(info == "只有表情也行，笑一个")
+        if(info.indexOf("只有表情也行，笑一个") != -1)
         {
-            //printf("只要表情？\n");
+            $("#reply_span").text("只要表情？");
             reply(reply_info[11][33]);
             return;
         }
@@ -1022,9 +1035,9 @@ function send_info()
 
     if(info.indexOf("自") != -1)
     {
-        if(info == "自顾自走掉，伤痕累累回来")
+        if(info.indexOf("自顾自走掉，伤痕累累回来") != -1)
         {
-            //printf("对不起，主人\n");
+            $("#reply_span").text("对不起，主人");
             reply(reply_info[11][12]);
             return;
         }
@@ -1032,9 +1045,9 @@ function send_info()
 
     if(info.indexOf("再") != -1)
     {
-        if(info == "再试一次")
+        if(info.indexOf("再试一次") != -1)
         {
-            //printf("ni a li\n");
+            $("#reply_span").text("ni a li");
             reply(reply_info[12][4]);
             return;
         }
@@ -1043,15 +1056,15 @@ function send_info()
     // #
     if(info.indexOf("（") != -1)
     {
-        if(info == "（笑）")
+        if(info.indexOf("（笑）") != -1)
         {
-            //printf("主人为什么在笑呢\n");
+            $("#reply_span").text("主人为什么在笑呢");
             reply(reply_info[2][13]);
             return;
         }
-        if(info == "（和妮姆芙牵手）")
+        if(info.indexOf("（和妮姆芙牵手）") != -1)
         {
-            //printf("扫描系统开始，@#*￥*&@，身体构造没有异常，动力炉没有异常，￥@*，刚才那是什么，动力炉在一瞬间，感觉到疼痛\n");
+            $("#reply_span").text("扫描系统开始，@#*￥*&@，身体构造没有异常，动力炉没有异常，￥@*，刚才那是什么，动力炉在一瞬间，感觉到疼痛");
             reply(reply_info[11][0]);
             return;
         }

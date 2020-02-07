@@ -22,6 +22,21 @@ body {
 	height: 650px;
 }
 
+#center #show_info #tip{
+	height: 200px;
+	width: 400px;
+	padding-top: 400px;
+    padding-left: 200px;
+}
+
+/* 回复框span */
+#center #show_info #tip #reply_span {
+	position: absolute;
+    margin-top: 90px;
+    margin-left: 40px;
+    width: 300px;
+}
+
 #center #info {
 	margin-left: 200px;
 	float: left;
