@@ -799,37 +799,37 @@ function send_info()
             reply(reply_info[1][3]);
             return;
         }
-        else if(info.indexOf("伊卡洛斯，你过去看看吧") != -1)
+        if(info.indexOf("伊卡洛斯，你过去看看吧") != -1)
         {
             $("#reply_span").text("好的，主人");
             reply(reply_info[2][1]);
             return;
         }
-        else if(info.indexOf("伊卡洛斯，要不要尝试一下数学题") != -1)
+        if(info.indexOf("伊卡洛斯，要不要尝试一下数学题") != -1)
         {
             $("#reply_span").text("我吗");
             reply(reply_info[2][9]);
             return;
         }
-        else if(info.indexOf("伊卡洛斯，背后的翅膀怎么了") != -1)
+        if(info.indexOf("伊卡洛斯，背后的翅膀怎么了") != -1)
         {
             $("#reply_span").text("那个，这个翅膀是可变式羽翼，可以缩小到这种程度的大小");
             reply(reply_info[5][3]);
             return;
         }
-        else if(info.indexOf("伊卡洛斯！") != -1)
+        if(info.indexOf("伊卡洛斯！") != -1)
         {
             $("#reply_span").text("是");
             reply(reply_info[7][4]);
             return;
         }
-        else if(info.indexOf("伊卡洛斯，你试试万岁看看") != -1)
+        if(info.indexOf("伊卡洛斯，你试试万岁看看") != -1)
         {
             $("#reply_span").text("万岁是吗");
             reply(reply_info[11][27]);
             return;
         }
-        else if(info.indexOf("伊卡洛斯，不用那么快，停，停") != -1)
+        if(info.indexOf("伊卡洛斯，不用那么快，停，停") != -1)
         {
             $("#reply_span").text("是");
             reply(reply_info[12][18]);

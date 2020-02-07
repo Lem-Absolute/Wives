@@ -10,22 +10,23 @@ body {
 
 #head {
     height: 100px;
+	height: 10%;
 }
 
 #center {
 	width: 1000px;
-	height: 800px;
+	height: 85%;
     margin: 0 auto;
 }
 
 #center #show_info {
-	height: 650px;
+	height: 80%;
 }
 
 #center #show_info #tip{
 	height: 200px;
 	width: 400px;
-	padding-top: 400px;
+	padding-top: 40%;
     padding-left: 200px;
 }
 
