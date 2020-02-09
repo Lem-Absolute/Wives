@@ -34,9 +34,9 @@ body {
 /* 回复框span */
 #center #show_info #tip #reply_span {
 	position: absolute;
-    margin-top: 90px;
-    margin-left: 40px;
-    width: 300px;
+    margin-top: 2%;
+    margin-left: 1%;
+    width: 30%;
 }
 
 #center #info {
@@ -52,7 +52,7 @@ body {
 
 #child_window {
 	position: absolute;
-    width: 50%;
+    width: 80%;
     height: 50%;
     top: 10px;
     left: 10px;
