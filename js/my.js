@@ -47,6 +47,7 @@ function browserRedirect() {
 }
 
 var state = 0;
+var flag = 0;
 
 // 跳转 说明页面
 function show_help()
@@ -946,43 +947,45 @@ function send_info()
     {
         if(info.indexOf("怎么了") != -1)
         {
-            var flag = 0;
-            if(flag)
-            {
-                $("#reply_span").text("主人遇到麻烦了");
-                reply(reply_info[3][3]);
-                return;
-            }
-            if(flag == 1)
-            {
-                $("#reply_span").text("没什么");
-                reply(reply_info[9][6]);
-                return;
-            }
-            
-        }
-        if(info.indexOf("怎么了，没什么精神呢") != -1)
-        {
-            $("#reply_span").text("我一点都帮不上主人的忙");
-            reply(reply_info[9][10]);
-            return;
-        }
+			if(info == "怎么了")
+			{
+				if(flag)
+				{
+					$("#reply_span").text("主人遇到麻烦了");
+					reply(reply_info[3][3]);
+					return;
+				}
+				if(flag == 1)
+				{
+					$("#reply_span").text("没什么");
+					reply(reply_info[9][6]);
+					return;
+				}
+			}
+			
+			if(info.indexOf("怎么了，没什么精神呢") != -1)
+			{
+				$("#reply_span").text("我一点都帮不上主人的忙");
+				reply(reply_info[9][10]);
+				return;
+			}	
+			if(info.indexOf("怎么了，伊卡洛斯") != -1)
+			{
+				$("#reply_span").text("没什么");
+				reply(reply_info[12][12]);
+				return;
+			}
+			if(info.indexOf("怎么了，伊卡洛斯，又是不好的玩笑是吗") != -1)
+			{
+				$("#reply_span").text("最喜欢你了，我的主人，永别了");
+				reply(reply_info[12][29]);
+				return;
+			}
+        }       
         if(info.indexOf("怎么样，这套内衣") != -1)
         {
             $("#reply_span").text("非常可爱哦，主人");
             reply(reply_info[10][0]);
-            return;
-        }
-        if(info.indexOf("怎么了，伊卡洛斯") != -1)
-        {
-            $("#reply_span").text("没什么");
-            reply(reply_info[12][12]);
-            return;
-        }
-        if(info.indexOf("怎么了，伊卡洛斯，又是不好的玩笑是吗") != -1)
-        {
-            $("#reply_span").text("最喜欢你了，我的主人，永别了");
-            reply(reply_info[12][29]);
             return;
         }
         if(info.indexOf("怎么样，伊卡洛斯") != -1)
