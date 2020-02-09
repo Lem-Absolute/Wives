@@ -143,6 +143,12 @@ function send_info()
 		["1-14/没事的，不管发生什么，主人还是我的主人，从今往后一直都是.mp3", "1-14/人造天使，翅膀吸水会变重的.mp3",
 		"1-14/天降之物F.mp3", "一切正常，主人.mp3", "1-14/泳池被禁止使用，去换衣服了.mp3", "1-14/这是主人的命令.mp3",
 		"1-14/主人（关心）.mp3", "1-14/主人，精神不稳定的话，变身会.mp3"
+		],
+		["2-1/早上好，主人", "2-1/诶.mp3", "2-1/我开动了.mp3"
+		],
+		["2-2/主人，我端茶来了.mp3", "2-2/主人去山上了.mp3", "2-2/主人好像在这里.mp3", "2-2/我去看看主人的状况.mp3", "2-2/主人，这是那么危险的东西吗.mp3",
+		"2-2/了解，对主人有害的东西，进行消除.mp3", "2-2/是，主人.mp3", "2-2/主人没什么事，但没什么精神.mp3", "2-2/欢迎回来，主人.mp3",
+		"2-2/要洗澡吗.mp3", "2-2/主人没什么精神，难道不应该把那个消除吗.mp3", "2-2/卡片启动.mp3", "2-2/太好了，主人感到幸福的话，我就足够了.mp3"
 		]
 	];
 	
@@ -426,6 +432,16 @@ function send_info()
         {
             $("#reply_span").text("没事的，不管发生什么，主人还是我的主人，从今往后一直都是");
 			reply(reply_info[13][0]);
+            return;
+        }
+    }
+	
+	if(info.indexOf("开") != -1)
+    {
+        if(info.indexOf("开炮，伊卡洛斯") != -1)
+        {
+            $("#reply_span").text("诶");
+			reply(reply_info[14][1]);
             return;
         }
     }
@@ -800,6 +816,24 @@ function send_info()
             reply(reply_info[11][22]);
             return;
         }
+		if(info.indexOf("我能做什么呢") != -1)
+        {
+            $("#reply_span").text("什么都可以");
+            reply(reply_info[0][4]);
+            return;
+        }
+		if(info.indexOf("我想看胖次") != -1)
+        {
+            $("#reply_span").text("胖次是吗。。。");
+            reply(reply_info[3][4]);
+            return;
+        }
+		if(info.indexOf("我回来了") != -1)
+        {
+            $("#reply_span").text("欢迎回来，主人");
+            reply(reply_info[15][8]);
+            return;
+        }
     }
 
     if(info.indexOf("喂") != -1)
@@ -810,6 +844,16 @@ function send_info()
             reply(reply_info[11][15]);
             $("#reply_span").text("早上好，主人");
             reply(reply_info[11][21]);
+            return;
+        }
+    }
+	
+	if(info.indexOf("哇") != -1)
+    {
+        if(info.indexOf("哇，这是什么，第一次看见这么危险的东西") != -1)
+        {
+            $("#reply_span").text("主人，这是那么危险的东西吗");
+			reply(reply_info[15][4]);
             return;
         }
     }
@@ -878,6 +922,18 @@ function send_info()
         {
             $("#reply_span").text("是");
             reply(reply_info[12][18]);
+            return;
+        }
+		if(info.indexOf("伊卡洛斯，抱一个") != -1)
+        {
+            $("#reply_span").text("好的，主人");
+            reply(reply_info[4][1]);
+            return;
+        }
+		if(info.indexOf("伊卡洛斯，干得漂亮，足够了，你回去吧") != -1)
+        {
+            $("#reply_span").text("是，主人");
+            reply(reply_info[15][6]);
             return;
         }
     }
@@ -990,9 +1046,20 @@ function send_info()
         }
         if(info.indexOf("怎么样，伊卡洛斯") != -1)
         {
-            $("#reply_span").text("太好了");
-            reply(reply_info[12][22]);
-            return;
+			if(flag == 0)
+			{
+				flag = 1;
+				$("#reply_span").text("太好了");
+				reply(reply_info[12][22]);
+				return;
+			}
+			else
+			{
+				flag = 0;
+				$("#reply_span").text("主人没什么事，但没什么精神");
+				reply(reply_info[15][7]);
+				return;
+			}
         }
     }
 
@@ -1020,6 +1087,12 @@ function send_info()
         {
             $("#reply_span").text("诶");
             reply(reply_info[11][14]);
+            return;
+        }
+		if(info.indexOf("这一定是某人的阴谋，之后我来处理吧") != -1)
+        {
+            $("#reply_span").text("了解，对主人有害的东西，进行消除");
+            reply(reply_info[15][5]);
             return;
         }
     }
@@ -1096,6 +1169,16 @@ function send_info()
         {
             $("#reply_span").text("ni a li");
             reply(reply_info[12][4]);
+            return;
+        }
+    }
+	
+	if(info.indexOf("智树") != -1)
+    {
+        if(info.indexOf("智树在吗") != -1)
+        {
+            $("#reply_span").text("主人去山上了");
+            reply(reply_info[15][1]);
             return;
         }
     }
