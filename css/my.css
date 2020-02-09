@@ -30,6 +30,10 @@ body {
     padding-left: 200px;
 }
 
+#tip img {
+	width: 400px;
+}
+
 /* 回复框span */
 #center #show_info #tip #reply_span {
 	position: absolute;
