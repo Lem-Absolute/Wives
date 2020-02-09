@@ -34,7 +34,7 @@ body {
 /* 回复框span */
 #center #show_info #tip #reply_span {
 	position: absolute;
-    margin-top: 4%;
+    margin-top: 8%;
     margin-left: 1%;
     width: 30%;
 }
