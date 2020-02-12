@@ -68,6 +68,17 @@ function show_help()
 // 播放对应音频
 function reply(str)
 {
+	document.body.style.backgroundImage = "url('img/1.jpg')";
+	var common_head = "./sound/";
+	var mp3 = common_head + str;
+	var mp3 = new Audio(mp3);
+	mp3.play(); //播放 mp3这个音频对象
+}
+
+// 播放对应音频
+function reply2(str)
+{
+	document.body.style.backgroundImage = "url('img/saber.jpg')";
 	var common_head = "./sound/";
 	var mp3 = common_head + str;
 	var mp3 = new Audio(mp3);
@@ -150,6 +161,11 @@ function send_info()
 		"2-2/了解，对主人有害的东西，进行消除.mp3", "2-2/是，主人.mp3", "2-2/主人没什么事，但没什么精神.mp3", "2-2/欢迎回来，主人.mp3",
 		"2-2/要洗澡吗.mp3", "2-2/主人没什么精神，难道不应该把那个消除吗.mp3", "2-2/卡片启动.mp3", "2-2/太好了，主人感到幸福的话，我就足够了.mp3"
 		]
+	];
+	
+	// FGO主题
+	var reply_info2 = [
+		["fgo/saber宝具.mp3"]
 	];
 	
 	// A
@@ -773,6 +789,16 @@ function send_info()
             return;
         }
     }
+	
+	if(info.indexOf("saber") != -1)
+	{
+		if(info.indexOf("saber，宝具解放！") != -1)
+        {
+            $("#reply_span").text("集结的星之吐息，闪耀的生命奔流-- 接下吧，誓约胜利之剑！");
+            reply2(reply_info2[0][0]);
+            return;
+        }
+	}
 
     // W
     if(info.indexOf("晚安") != -1)
